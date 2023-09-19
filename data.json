@@ -1,0 +1,22 @@
+{
+"projects" : [
+    {
+        "id": 0,
+        "project_name": "project 1",
+        "description": "blah",
+        "technologies": "js",
+        "live_link": "js",
+        "github_link": "js",
+        "image_urls": "js"
+    },
+    {
+        "id": 1,
+        "project_name": "project 1",
+        "description": "blah",
+        "technologies": "js",
+        "live_link": "js",
+        "github_link": "js",
+        "image_urls": "js"
+    }
+    ]
+}
