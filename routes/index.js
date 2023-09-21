@@ -11,16 +11,17 @@ router.get('/about', (req, res) => {
     res.render('about')
 })
 
-// Dynamic "project" routes (/project/:id or /projects/:id) based on the id of the project that render a customized version
-// of the Pug project template to show off each project. Which means adding data, or "locals", 
-// as an object that contains data to be passed to the Pug template.
+// Dynamic "project" routes based on the id of the project 
 router.get('/project/:id', (req, res, next) => {
     const projectId = req.params.id;
     const project = data.projects.find(project => project.id.toString() === projectId);
+
     if (!project) {
-        const error = new Error('Project not found');
-        error.status = 404;
-        next(error);
+        const err = new Error();
+        err.status = 404;
+        err.message = `Looks like the page requested doesn't exist.`
+        next(err);
+
     };
     res.render('project', { project });
 })

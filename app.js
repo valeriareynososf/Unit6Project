@@ -1,16 +1,16 @@
 //import express from 'express';
 const express = require('express');
 // const data = require('./data');
-
+const routes = require('./routes')
 const app = express();
 
 app.set('view engine', 'pug')
+app.use('/static', express.static('public'));
 
-const routes = require('./routes')
 
 app.use(routes);
 //use a static route and the express.static method to serve the static files located in the public folder
-app.use('static', express.static('public'));
+
 
 // //An "index" route (/) to render the "Home" page with the locals set to data.projects
 // app.get('/', (req, res) => {
@@ -38,8 +38,24 @@ app.use('static', express.static('public'));
 
 
 
+//404 Error Handler
+app.use((req, res, next) => {
+//     const error = new Error('Page Not Found');
+//     error.status = 404;
+// console.log("hmmmm", error)
+//     next(error);
+// console.log("there's an error")
+res.status(404).render('error')
+})
 
-// app.use()
+//Global Error Handler
+app.use((err, req, res) => {
+    err.status = err.status || 500;
+    err.message = err.message || 'Internal Server Error';
+    console.log(`${err.status} - ${err.message}`)
+    res.status(err.status).render('error', { err })
+})
+
 
 app.listen(3000, () => {
     console.log("The application is running on localhost:3000")

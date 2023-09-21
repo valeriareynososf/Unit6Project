@@ -7,7 +7,7 @@
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": "https://valeriareynososf.github.io/Unit1Project/",
         "github_link": "https://github.com/valeriareynososf/Unit1Project",
-        "image_urls": ["/images/project1Main.png", "/images/project1Other.png"]
+        "image_urls": ["images/project1.png", "images/project1A.png"]
     },
     {
         "id": 1,
@@ -16,7 +16,7 @@
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": "https://valeriareynososf.github.io/Unit2Project/",
         "github_link": "https://github.com/valeriareynososf/Unit2Project",
-        "image_urls": ["/images/project1Main.png", "/images/project1Other.png"]
+        "image_urls": ["images/project1.png", "images/project1A.png"]
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": "https://valeriareynososf.github.io/Unit3Project/",
         "github_link": "https://github.com/valeriareynososf/Unit3Project",
-        "image_urls": ["/images/project1Main.png", "/images/project1Other.png"]
+        "image_urls": ["images/project1.png", "images/project1A.png"]
     },
     {
         "id": 3,
@@ -34,7 +34,7 @@
         "technologies": ["JavaScript", "HTML", "CSS"],
         "live_link": "https://valeriareynososf.github.io/Unit4Project/",
         "github_link": "https://github.com/valeriareynososf/Unit4Project",
-        "image_urls": ["/images/project1Main.png", "/images/project1Other.png"]
+        "image_urls": ["images/project1.png", "images/project1A.png"]
     },
     {
         "id": 4,
@@ -43,7 +43,7 @@
         "technologies": ["JavaScript", "HTML", "CSS", "API"],
         "live_link": "https://valeriareynososf.github.io/Unit5Project/",
         "github_link": "https://github.com/valeriareynososf/Unit5Project",
-        "image_urls": ["/images/project1Main.png", "/images/project1Other.png"]
+        "image_urls": ["images/project1.png", "images/project1.png.pngOther.png"]
     }
     ]
 }
