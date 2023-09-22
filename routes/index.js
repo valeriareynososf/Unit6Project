@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const data = require('../data.json');
+
 //An "index" route (/) to render the "Home" page with the locals set to data.projects
 router.get('/', (req, res) => {
     res.render('index', { data : data.projects })
@@ -17,15 +18,8 @@ router.get('/project/:id', (req, res, next) => {
     const project = data.projects.find(project => project.id.toString() === projectId);
 
     if (project) {
-        //const err = new Error();
-        // err.status = 404;
-        // err.message = `Looks like the page requested doesn't exist.`
-        // next(err);
-        //res.render('project', { project });
-        //res.status(404).render('page-not-found')
         res.render('project', { project });
     } else {
-        //res.render('project', { project });
         res.status(404).render('page-not-found')
     }
     
