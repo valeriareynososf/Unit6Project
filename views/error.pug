@@ -1,7 +1,11 @@
 extends layout.pug
 
 block content
-    h1 Whoooops
-    //- if error.status
-    //-     h2 #{error.status}
-    //-         p #{error.message}
+    div
+        h1 Server Error
+        h2= `Error status code: ${err.status}`
+        p= err.message
+
+        a.home(href=`/`) Home
+        div
+            p= err.stack

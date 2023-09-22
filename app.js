@@ -40,20 +40,27 @@ app.use(routes);
 
 //404 Error Handler
 app.use((req, res, next) => {
-//     const error = new Error('Page Not Found');
-//     error.status = 404;
+    const error = new Error('Page Not Found');
+    error.status = 404;
 // console.log("hmmmm", error)
-//     next(error);
-// console.log("there's an error")
-res.status(404).render('error')
+    next(error);
+    // console.log('404 error handler called');
+
+    // res.status(404).render('page-not-found')
 })
 
 //Global Error Handler
 app.use((err, req, res) => {
-    err.status = err.status || 500;
-    err.message = err.message || 'Internal Server Error';
-    console.log(`${err.status} - ${err.message}`)
-    res.status(err.status).render('error', { err })
+    if (err) {
+        console.log(`${err.status} - ${err.message}`)
+      }
+    if (err.status === 404) {
+        res.status(404).render('page-not-found', { err })
+    } else {
+        err.message = err.message || 'Internal Server Error';
+        res.status(err.status || 500).render('error', { err })
+    }
+   
 })
 
 
