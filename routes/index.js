@@ -16,15 +16,17 @@ router.get('/project/:id', (req, res, next) => {
     const projectId = req.params.id;
     const project = data.projects.find(project => project.id.toString() === projectId);
 
-    if (!project) {
-        // const err = new Error();
+    if (project) {
+        //const err = new Error();
         // err.status = 404;
         // err.message = `Looks like the page requested doesn't exist.`
         // next(err);
         //res.render('project', { project });
-        res.status(404).render('page-not-found')
-    } else {
+        //res.status(404).render('page-not-found')
         res.render('project', { project });
+    } else {
+        //res.render('project', { project });
+        res.status(404).render('page-not-found')
     }
     
 })

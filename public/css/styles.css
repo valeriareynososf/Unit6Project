@@ -137,7 +137,8 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: #FDCF00;
+  /* background: #000; */
 }
 
 .sidebar-info-box {
@@ -159,6 +160,7 @@ nav a span {
 }
 
 .sidebar h5 {
+  /* color: #160F00; */
   color: #fefefe;
   margin: 0 auto 0.5rem;
 }
@@ -167,7 +169,8 @@ nav a span {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 14px;
-  color: #999
+  color: #160F00;
+  /* color: #999 */
 }
 
 .sidebar a {
@@ -184,7 +187,8 @@ nav a span {
   color: #fefefe;
   height: 40px;
   padding: 0.5rem;
-  background: #0a0a0a;
+  background: #FDCF00;
+  /* background: #0a0a0a; */
   border-left: 1px solid #0a0a0a;
 }
 
@@ -361,4 +365,16 @@ nav a span {
   .inner-wrapper {
     max-width: 1200px;
   }
+}
+
+/* CSS for error container */
+.container {
+  padding: 10px 50px;
+}
+
+/* CSS for error lego image */
+.error-img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }

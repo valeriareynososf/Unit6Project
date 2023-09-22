@@ -1,11 +1,14 @@
 extends layout.pug
 
 block content
-    div
+    div.container
         h1 Server Error
         h2= `Error status code: ${err.status}`
         p= err.message
 
-        a.home(href=`/`) Home
+        nav.nav
+          a(href='/')
+            span &larr;
+            |  Back
         div
             p= err.stack

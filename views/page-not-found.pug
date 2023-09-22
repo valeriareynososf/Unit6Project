@@ -1,12 +1,15 @@
 extends layout.pug
 
 block content
-    div
+    div.container
         h1 404 Page Not Found
         p Oops! The page you're looking for does not exist.
-
-        a.home(href=`/`) Home
-
-        if err
-            div
-                p= err.stack
+        nav.nav
+          a(href='/')
+            span &larr;
+            |  Back
+    div
+        img.error-img(src=`/static/images/404Error.png`, alt=`Image for 404 error`)
+    if err
+        div
+            p= err.stack
